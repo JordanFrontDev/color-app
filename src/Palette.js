@@ -16,6 +16,7 @@ const Palette = ({ palette }) => {
         setFormat(value);
     }
 
+    const { colors, paletteName, emoji, id } = palette;
     return (
         <div className='palette'>
             <NavBar
@@ -25,10 +26,14 @@ const Palette = ({ palette }) => {
             />
 
             <div className='palette-color'>
-                {palette.colors[level].map((color) => (
-                    <ColorBox background={color[format]} name={color.name} />
+                {colors[level].map((color) => (
+                    <ColorBox background={color[format]} name={color.name} key={id} />
                 ))}
             </div>
+            <footer className='palette-footer'>
+                {paletteName}
+                <span className='emoji'>{emoji}</span>
+            </footer>
         </div>
     );
 }
