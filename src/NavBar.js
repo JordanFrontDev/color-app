@@ -10,7 +10,7 @@ import { IconButton } from '@material-ui/core';
 import 'rc-slider/assets/index.css';
 import './NavBar.css';
 
-const NavBar = ({ level, changeLevel, changeFormat }) => {
+const NavBar = ({ level, changeLevel, changeFormat, showLevels }) => {
     const [format, setFormat] = useState('hex');
     const [isOpen, setIsOpen] = useState(false);
 
@@ -30,7 +30,7 @@ const NavBar = ({ level, changeLevel, changeFormat }) => {
             <div className='logo'>
                 <Link to='/'>ReactColorPicker</Link>
             </div>
-
+            {showLevels && 
             <div className='slider-container'>
                 <span>Level: {level}</span>
                 <div className='slider'>
@@ -41,7 +41,7 @@ const NavBar = ({ level, changeLevel, changeFormat }) => {
                         step={100}
                     />
                 </div>
-            </div>
+            </div>}
 
             <div className='select-container'>
                 <Select value={format} onChange={handleChange}>

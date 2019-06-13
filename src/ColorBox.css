@@ -8,25 +8,7 @@
     margin-bottom: -3.5px;
 }
 
-.copy-button {
-    width: 5rem;
-    height: 2rem;
-    position: absolute;
-    display: inline-block;
-    top: 50%;
-    left: 50%;
-    margin-left: -3rem;
-    margin-top: -1.5rem;
-    text-align: center;
-    outline: none;
-    background: rgba(255, 255, 255, 0.3);
-    font-size: 1rem;
-    line-height: 30px;
-    color: #fff;
-    text-transform: uppercase;
-    border: none;
-    opacity: 0;
-}
+
 
 .color-box:hover .copy-button {
     opacity: 1;
@@ -42,6 +24,40 @@
     color: #000;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
+}
+
+.single-color-palette .color-box {
+    height: 50%;
+}
+
+.color-box.go-back {
+    background-color: #000;
+}
+
+.copy-button, 
+.back-button {
+    width: 5rem;
+    height: 2rem;
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    left: 50%;
+    margin-left: -2.4rem;
+    margin-top: -1.5rem;
+    text-align: center;
+    outline: none;
+    background: rgba(255, 255, 255, 0.3);
+    font-size: 1rem;
+    line-height: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    text-decoration: none;
+}
+
+.copy-button {
+    opacity: 0;
+
 }
 
 .see-more {
